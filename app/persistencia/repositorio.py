@@ -18,6 +18,8 @@ class ApresentacaoModel(Base):
 
 
 class RepositorioSQL:
+    """Implementação SQLAlchemy da porta Repositorio (protege C03; suporta MySQL e SQLite)."""
+
     def __init__(self, url: str):
         kwargs = {}
         if url.startswith("sqlite") and ":memory:" in url:
